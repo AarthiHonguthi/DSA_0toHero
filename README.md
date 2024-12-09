@@ -8,10 +8,13 @@ Starting DSA felt overwhelming, and I struggled with the fear of not being able 
 Strengthening Fundamentals:
 
 Focused on mastering a programming language first (for me, it’s C++ 💪).
+
 Structured Learning:
 
 Followed Striver’s DSA Sheet, a well-organized guide for learning and practicing DSA systematically.
+
 What’s Inside?
+
 This repository contains:
 
 🌟 Daily Problem-Solving Logs: Solutions and explanations for the problems I solve every day.
@@ -31,5 +34,6 @@ How to Use This Repository?
 Browse through the folders for problem solutions and explanations.
 Refer to the Fundamentals section if you're new to DSA.
 Follow along or use this as inspiration to build your own DSA journey.
+
 Let’s Conquer DSA Together! 🚀
 
