@@ -47,3 +47,39 @@ Constraints:
 0 <= nums[i] <= 50
 0 <= val <= 100
 */
+
+#include <vector>
+using namespace std;
+
+class Solution
+{
+public:
+    int removeElement(vector<int> &nums, int val)
+    {
+        int count = 0; // To count occurrences of val
+
+        // Count occurrences of val
+        for (int i = 0; i < nums.size(); i++)
+        {
+            if (nums[i] == val)
+            {
+                count++;
+            }
+        }
+
+        // The result: Total size - occurrences of val
+        int result = nums.size() - count;
+
+        // Rearrange non-val elements to the front
+        int writeIndex = 0; // Tracks the position to write non-val elements
+        for (int i = 0; i < nums.size(); i++)
+        {
+            if (nums[i] != val)
+            {
+                nums[writeIndex++] = nums[i];
+            }
+        }
+
+        return result; // Number of non-val elements
+    }
+};
