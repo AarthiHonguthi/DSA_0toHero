@@ -40,7 +40,6 @@ Explanation: Your function should return k = 5, with the first five elements of 
 Note that the five elements can be returned in any order.
 It does not matter what you leave beyond the returned k (hence they are underscores).
 
-
 Constraints:
 
 0 <= nums.length <= 100
