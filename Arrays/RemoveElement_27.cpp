@@ -22,9 +22,7 @@ sort(nums, 0, k); // Sort the first k elements of nums
 for (int i = 0; i < actualLength; i++) {
     assert nums[i] == expectedNums[i];
 }
-If all assertions pass, then your solution will be accepted.
-
-
+If all assertions pass, then your solution will be accepted
 
 Example 1:
 
