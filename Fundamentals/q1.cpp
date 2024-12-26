@@ -18,7 +18,7 @@ int main()
     cout << "Enter a number: ";
     cin >> n;
 
-    // Calculate sum using the formula for the sum of first n natural numbers
+    //Calculate sum using the formula for the sum of first n natural numbers
     int sum = n * (n + 1) / 2;
 
     cout << "Sum of the first " << n << " natural numbers is: " << sum << endl;

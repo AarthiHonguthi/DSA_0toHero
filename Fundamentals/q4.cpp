@@ -6,7 +6,7 @@ using namespace std;
 pair<int, int> findMaxMin(const vector<int> &arr)
 {
     if (arr.empty())
-        return {INT_MIN, INT_MAX}; // Handle edge case: empty array
+        return {INT_MIN, INT_MAX}; //  Handle edge case: empty array
 
     int maxVal = arr[0];
     int minVal = arr[0];

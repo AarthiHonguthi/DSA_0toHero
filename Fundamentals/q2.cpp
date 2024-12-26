@@ -31,10 +31,10 @@ int main()
     cout << "Enter a number: ";
     cin >> n;
 
-    // Output using recursive factorial
+    //  Output using recursive factorial
     cout << "Factorial of " << n << " (recursive) is: " << factorial_recursive(n) << endl;
 
-    // Output using iterative factorial
+    //  Output using iterative factorial
     cout << "Factorial of " << n << " (iterative) is: " << factorial_iterative(n) << endl;
 
     return 0;

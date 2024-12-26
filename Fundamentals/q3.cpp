@@ -1,6 +1,6 @@
 #include <iostream>
-#include <string> // Required for std::string and getline
-#include <cctype> // Required for isalnum and tolower
+#include <string> //  Required for std::string and getline
+#include <cctype> //  Required for isalnum and tolower 
 
 using namespace std;
 
