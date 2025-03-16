@@ -35,7 +35,7 @@ int main()
     head->next->next = new Node(6);
     head->next->next->next = new Node(8);
 
-    cout << "Length of Linked List: " << getLength(head) << endl;
+    cout << "Length of Linked List: " << getLength(head) << endl; //return Length of Linked List
 
     return 0;
 }
