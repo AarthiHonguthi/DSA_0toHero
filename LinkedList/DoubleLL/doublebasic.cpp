@@ -69,7 +69,7 @@ public:
         temp->next = newNode;
     }
 
-    // Delete Head Node
+    // Delete Head Nodes
     void deleteHead()
     {
         if (!head)
