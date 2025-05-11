@@ -2,67 +2,26 @@
 #include <stack>
 using namespace std;
 
-class MyStack
-{
-private:
-    stack<int> st;
-
-public:
-    // Push an element onto the stack
-    void push(int x)
-    {
-        st.push(x);
-        cout << "Pushed: " << x << endl;
-    }
-
-    // Pop the top element from the stack
-    void pop()
-    {
-        if (st.empty())
-        {
-            cout << "Stack Underflow: No elements to pop\n";
-            return;
-        }
-        cout << "Popped: " << st.top() << endl;
-        st.pop();
-    }
-
-    // Peek the top element of the stack
-    int top()
-    {
-        if (st.empty())
-        {
-            cout << "Stack is empty\n";
-            return -1;
-        }
-        return st.top();
-    }
-
-    // Check if the stack is empty
-    bool isEmpty()
-    {
-        return st.empty();
-    }
-
-    // Get the current size of the stack
-    int size()
-    {
-        return st.size();
-    }
-};
-
 int main()
 {
-    MyStack s;
-    s.push(10);
-    s.push(20);
-    s.push(30);
+    stack<int> st; // Creating a stack of integers
+    int n = 5;     // Number of elements to push
 
-    cout << "Top element: " << s.top() << endl;
-    s.pop();
-    cout << "Top element after pop: " << s.top() << endl;
-    cout << "Is empty: " << s.isEmpty() << endl;
-    cout << "Stack size: " << s.size() << endl;
+    // Push 5 elements onto the stack
+    for (int i = 1; i <= n; i++)
+    {
+        st.push(i * 10); // Pushing multiples of 10 (10, 20, 30, 40, 50)
+    }
 
+    cout << "Popping all elements from the stack:\n";
+
+    // Pop all elements from the stack and print
+    while (!st.empty())
+    {
+        cout << st.top() << " "; // Print the top element
+        st.pop();                // Pop the top element
+    }
+
+    cout << endl; // Print a newline for clarity
     return 0;
 }
