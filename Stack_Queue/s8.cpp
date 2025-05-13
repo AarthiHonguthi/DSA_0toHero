@@ -1,3 +1,4 @@
+//Middle element of the stack
 #include <iostream>
 #include <stack>
 using namespace std;
@@ -7,24 +8,22 @@ int solve(stack<int> &st, int &pos)
 {
     if (pos == 1)
     {
-        return st.top();
+        return st.top(); //base case
     }
 
-    // Step 1: Work
     pos--;
-    int temp = st.top();
+    int temp = st.top(); // ek case hum solve karenge
     st.pop();
 
-    // Step 2: Recursive call
     int ans = solve(st, pos);
 
-    // Step 3: Backtrack - push element back
+    // Backtrack 
     st.push(temp);
 
     return ans;
 }
 
-// Main function to get middle element
+
 int getMiddleElement(stack<int> &st)
 {
     int pos = (st.size() / 2) + 1; // 1-based middle index
@@ -42,7 +41,6 @@ int main()
 
     cout << "Middle Element: " << getMiddleElement(st) << endl;
 
-    // Optional: Print stack to verify it's unchanged
     cout << "Stack after operation: ";
     while (!st.empty())
     {
