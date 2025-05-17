@@ -24,9 +24,18 @@ public:
             cout << "Queue OverFlow" << endl;
             return;
         }
-        if (front == -1)
-            front++;
-        arr[++rear] = val;
+
+        // Proper first element check
+        if (front == -1 && rear == -1)
+        {
+            front = rear = 0;
+        }
+        else
+        {
+            rear++;
+        }
+
+        arr[rear] = val;
     }
 
     void pop()
@@ -97,6 +106,7 @@ int main()
     q.push(40);
     q.push(50);
     q.push(60);
+    q.push(70);
     q.print();                                 // 20 30 40 50 60
     cout << "Front: " << q.getFront() << endl; // 20
     cout << "Rear: " << q.getRear() << endl;   // 60

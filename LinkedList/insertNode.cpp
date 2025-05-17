@@ -45,10 +45,18 @@ void insertAtPosition(Node *&head, int val, int pos)
         insertAtHead(head, val);
         return;
     }
-    Node *temp = head;
-    for (int i = 1; temp != NULL && i < pos - 1; i++)
-        temp = temp->next;
 
+    Node *temp = head;
+    int count = 1;
+
+    // Move to the (pos-1)th node
+    while (temp && count < pos - 1)
+    {
+        temp = temp->next;
+        count++;
+    }
+
+    // If temp is NULL, the position is out of bounds
     if (!temp)
         return;
 

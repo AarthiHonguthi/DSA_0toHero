@@ -38,9 +38,11 @@ void deleteAtPosition(Node *&head, int pos)
     }
 
     Node *temp = head;
-    for (int i = 1; temp != NULL && i < pos - 1; i++)
+    int count = 1;
+    while (temp != NULL && count < pos-1)
     {
-        temp = temp->next; // Move to (pos - 1)th node
+        temp = temp->next; 
+        count++;
     }
 
     if (!temp || !temp->next)
