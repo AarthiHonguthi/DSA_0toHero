@@ -36,10 +36,9 @@ public:
             mp[nums2[i]] = i;
         }
         vector<int> ans;
-        for (int i = 0; i < n1; i++)
+        for (int num: nums1)
         {
-            int idx = mp[nums1[i]];
-            ans.push_back(nge[idx]);
+            ans.push_back(mp[num]);
         }
         return ans;
     }
