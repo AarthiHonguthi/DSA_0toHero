@@ -38,7 +38,6 @@ Node *buildTree()
     return root;
 }
 
-// Level Order Traversal Function
 void levelOrderTraversal(Node *root)
 {
     if (root == NULL)
@@ -46,25 +45,36 @@ void levelOrderTraversal(Node *root)
 
     queue<Node *> q;
     q.push(root);
+    q.push(NULL); // Marker for end of first level
 
     while (!q.empty())
     {
         Node *temp = q.front();
         q.pop();
 
-        cout << temp->data << " ";
+        if (temp == NULL)
+        {
+            cout << endl; // End of current level
 
-        if (temp->left)
-            q.push(temp->left);
-        if (temp->right)
-            q.push(temp->right);
+            if (!q.empty())
+                q.push(NULL); // Marker for next level
+        }
+        else
+        {
+            cout << temp->data << " ";
+
+            if (temp->left)
+                q.push(temp->left);
+            if (temp->right)
+                q.push(temp->right);
+        }
     }
 }
 
 int main()
 {
-    Node *root = buildTree();
-    cout << "\nLevel Order Traversal: ";
+    Node *root = buildTree(); 
+    cout << "\nLevel Order Traversal: \n";
     levelOrderTraversal(root);
     return 0;
 }
